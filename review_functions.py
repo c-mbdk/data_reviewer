@@ -73,7 +73,7 @@ def review_against_lookup(df, lookup_key, lookup_dict):
             lookup_observations.append(f"Row {num+1}: Null value in {lookup_key} cannot match with the lookup file.")
         else:
             if int(value) not in lookup_dict.keys():
-                lookup_observations.append(f'This value {int(value)} is not present in the lookup')
+                lookup_observations.append(f'No match found for {int(value)} in the lookup')
     return lookup_observations
 
 # handling null values in validated columns - for each validated column in the source file, identify the rows with null values
